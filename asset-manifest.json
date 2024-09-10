@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/Harry.me/static/css/main.cd6e5446.css",
+    "main.js": "/Harry.me/static/js/main.f3d688ce.js",
+    "static/js/453.acca0757.chunk.js": "/Harry.me/static/js/453.acca0757.chunk.js",
+    "static/media/bg_temp.jpg": "/Harry.me/static/media/bg_temp.89948fdb7755c081b956.jpg",
+    "index.html": "/Harry.me/index.html",
+    "main.cd6e5446.css.map": "/Harry.me/static/css/main.cd6e5446.css.map",
+    "main.f3d688ce.js.map": "/Harry.me/static/js/main.f3d688ce.js.map",
+    "453.acca0757.chunk.js.map": "/Harry.me/static/js/453.acca0757.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.cd6e5446.css",
+    "static/js/main.f3d688ce.js"
+  ]
+}

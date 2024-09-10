@@ -6,7 +6,11 @@ function Hero() {
     <section id="hero" className="hero" data-aos="fade-down">
       <div className="hero-content">
       <div className="hero-image" >
-          <img src={p2}  alt='error' data-aos="fade-in" data-aos-delay="600" />
+<<<<<<< HEAD
+          
+=======
+          <img src="../images/p2.png" alt="Hariharasudhan" data-aos="fade-in" data-aos-delay="600" />
+>>>>>>> 320d21059abed3df906f6ee5f283feaa2bebc04d
         </div>
         <div className="hero-text">
           <h1 data-aos="fade-left" data-aos-delay="500" >Hi, I'm Hariharasudhan</h1>

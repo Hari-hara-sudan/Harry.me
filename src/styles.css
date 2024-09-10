@@ -1,0 +1,796 @@
+/* src/styles.css */
+
+/* Global Styles */
+/* Enable smooth scrolling for the whole page */
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-style:bolder ;
+
+  }
+  .hide-scrollbar {
+    overflow: auto; /* Allows scrolling */
+    scrollbar-width: none; /* Hides the scrollbar */
+  }
+  /* Add background image to the body */
+
+  
+  
+  
+  body {
+    background-color:transparent;
+    color: #333;    
+    line-height: 1.6;
+
+    background-image:url('../src/Assets/bg_temp.jpg'); /* Add your image path */
+    background-size: cover; /* Ensure the image covers the entire background */
+    background-position: center; /* Center the background image */
+    background-attachment: fixed; /* Keeps the background fixed when scrolling */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    color: #ffffff; /* White text for readability */
+    
+  }
+  
+  h1, h2, h3 {
+    margin-bottom: 1rem;
+  }
+  
+  ul {
+    list-style: none;
+  }
+  
+  a {
+    color: #f809ece5;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    color: #ff03c8;
+  }
+  /* Offset for sections so they are not hidden behind the navbar */
+section {
+  padding-top: 20px; /* Adjust based on your header height */
+  scroll-margin-top: 40px; 
+  margin-bottom: 20px;/*
+   Ensures section isn't hidden when navigated to */
+}
+
+  
+  /* Header Styles */
+  header {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    background-color: transparent; /* Slightly transparent */
+    backdrop-filter: blur(10px);
+    /* margin-bottom: 20px; Blurs the background */
+  }
+
+
+  /* Highlight active navigation link */
+header nav ul li a {
+  color: #f809ece5;
+  transition: color 0.3s;
+}
+
+header nav ul li.active a {
+  color: #ff00f2; /* Highlight active section link */
+  font-weight: bold;
+}
+
+  header {
+    background-color:transparent;
+    padding: 1rem;  
+    /* color: #c90f0f; */
+    text-align: center;
+    backdrop-filter: blur(100px);
+    width: 80%;
+    margin-left: 10%;
+    border-radius: 30px;
+    margin-top:10px ;
+    border: 1px solid #f809ece5;
+    margin-bottom: 20px;
+
+
+   
+    
+  }
+  
+  header nav ul {
+    display: flex;
+    justify-content: right;
+    gap: 1.5rem;
+ 
+
+    
+
+  }
+  
+  header nav ul li {
+    list-style: none;
+   
+   
+  }
+
+  /* Hero Section */
+  .hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: linear-gradient(50deg, #ffffff02, #ffffff04);
+    
+    color: #fff;
+    text-align: center;
+    border-radius: 40px;
+    margin-left: 20px;
+    margin-right: 20px;
+    backdrop-filter: blur(50px);
+    border: 1px solid rgba(255, 255, 255, 0.089);
+    box-shadow: 0px 0px 5px rgba(247, 34, 236, 0.687);
+  }
+  
+  .hero h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .hero p {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .hero .btn {
+    background-color: #f809ece5;
+    color: white;
+    padding: 0.7rem 1.5rem;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .hero .btn:hover {
+    background-color: #ff00f2;
+  }
+  
+  /* Hero Section Styles */
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full screen height */
+  /* background-color: #000000; */
+  padding: 2rem;
+  flex-direction: column;
+}
+
+.hero-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap; /* Ensures responsive design on smaller screens */
+  max-width: 1200px;
+  width: 100%;
+  
+}
+
+.hero-text {
+  flex: 1;
+  padding: 1rem;
+}
+
+.hero-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-image img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 50%; /* Circular image */
+  border: 5px solid #f809ece5; /* Optional: add a border around the image */
+}
+
+.hero .btn {
+  background-color: #f809ece5;
+  color: white;
+  padding: 0.7rem 1.5rem;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.hero .btn:hover {
+  background-color:#ff00f2;
+  transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-text, .hero-image {
+    margin-bottom: 1.5rem;
+  }
+
+  .hero-image img {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+  
+  /* About Section */
+ /* About Section */
+
+/* About Section */
+.about {
+  padding: 2rem;
+  backdrop-filter: blur(50px); /* Apply blur effect */
+  background: rgba(255, 255, 255, 0.1); /* Semi-transparent background for better visibility */
+  border-radius: 20px; /* Optional: for rounded corners */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3); /* Optional: to add a shadow effect */
+}
+
+/* About Section */
+.about {
+  padding: 2rem;
+  backdrop-filter: blur(50px); /* Apply blur effect */
+  background: linear-gradient(50deg, #ffffff02, #ffffff04); /* Semi-transparent background for better visibility */
+  border-radius: 20px; /* Optional: for rounded corners */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  margin-left: 20px;
+  margin-right: 20px; 
+  border-radius: 40px;
+  border: 1px solid rgba(255, 255, 255, 0.089);
+  box-shadow: 0px 0px 5px rgba(247, 34, 236, 0.687);/* Optional: to add a shadow effect */
+}
+
+.about h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #ff03c8; /* Apply your theme color */
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.grid-item {
+  background-color:#ad52b215;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(79, 79, 79, 0.2);
+  transition: transform 0.3s;
+}
+
+.grid-item:hover {
+  transform: translateY(-5px);
+}
+
+.grid-item h3 {
+  margin-bottom: 0.5rem;
+  color: #d24cff; /* Adjust this color to your preference */
+}
+
+.grid-item p {
+  margin: 0.5rem 0;
+}
+
+.grid-item ul {
+  padding-left: 1.5rem;
+  list-style-type: disc;
+}
+
+.grid-item ul li {
+  margin-bottom: 0.5rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .about {
+    padding: 1rem; /* Reduce padding for smaller screens */
+  }
+
+  .about h2 {
+    font-size: 1.5rem; /* Adjust font size for the header */
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr; /* Single column layout for smaller screens */
+  }
+
+  .grid-item {
+    padding: 1rem; /* Adjust padding for smaller screens */
+  }
+
+  .grid-item h3 {
+    font-size: 1.2rem; /* Adjust font size for smaller screens */
+  }
+
+  .grid-item p {
+    font-size: 0.9rem; /* Adjust font size for smaller screens */
+  }
+
+  .grid-item ul {
+    padding-left: 1rem; /* Adjust padding for smaller screens */
+  }
+
+  .grid-item ul li {
+    font-size: 0.9rem; /* Adjust font size for smaller screens */
+  }
+}
+
+
+
+
+  /* Projects Section */
+/* Projects Section */
+.projects {
+  padding: 4rem 2rem;
+  color: #fff;
+  text-align: center;
+  background: linear-gradient(50deg, #ffffff02, #ffffff04);
+  backdrop-filter: blur(50px);
+  border-radius: 40px;
+  box-shadow: 0px 0px 5px rgba(247, 34, 236, 0.687);
+  /* margin: 0 auto; Center the section */
+  /* max-width: 1200px; Set a maximum width */
+  margin-left: 20px;
+  margin-right: 20px; 
+}
+
+/* Title Styling */
+.projects h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #ff00f2; /* Theme color */
+}
+
+/* List Styling */
+.projects ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 0; /* Remove default padding */
+  list-style: none; /* Remove default list styling */
+}
+
+/* List Item Styling */
+.projects li {
+  background-color: #ad52b215;
+  border-radius: 20px; /* Rounded corners */
+  padding: 2rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden; /* Ensure content does not overflow */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Ensure content is spaced evenly */
+}
+
+/* Project Title Styling */
+.projects h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+/* Project Link Styling */
+.projects a {
+  color: #ff6363;
+  margin-top: 1rem;
+  display: inline-block;
+  font-weight: bold;
+}
+
+/* Hover Effect for Links */
+.projects a:hover {
+  color: #ff4141;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .projects {
+    padding: 2rem 1rem; /* Reduce padding for smaller screens */
+  }
+
+  .projects h2 {
+    font-size: 2rem; /* Adjust font size for header */
+  }
+
+  .projects ul {
+    gap: 1rem; /* Reduce gap between list items */
+  }
+
+  .projects li {
+    padding: 1rem; /* Adjust padding for smaller screens */
+  }
+
+  .projects h3 {
+    font-size: 1.5rem; /* Adjust font size for smaller screens */
+  }
+}
+
+  
+  /* Skills Section */
+/* Skills Section */
+.skills {
+  padding: 4rem 2rem;
+  color: #fff; /* White text color for readability */
+  text-align: center;
+  margin-left: 20px;
+  margin-right: 20px;
+  backdrop-filter: blur(50px);
+  border-radius: 40px;
+  background: linear-gradient(50deg, #ffffff02, #ffffff04); /* Light gradient for background */
+  box-shadow: 0px 0px 5px rgba(247, 34, 236, 0.687); /* Box shadow to match theme */
+}
+
+.skills h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #ff03c8; /* Bright color for the heading */
+}
+
+.skills ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  list-style: none; /* Remove default list styling */
+  padding: 0;
+}
+
+.skills li {
+  background-color: #ad52b245; /* Highlighted color for skills */
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #ffffff; /* Dark text color for contrast */
+  transition: background-color 0.3s ease;
+}
+
+.skills li:hover {
+  background-color: #ff03c8; /* Darker color on hover for effect */
+}
+
+  /* Contact Section */
+  .contact {
+    padding: 4rem 2rem;
+    color: #fff;
+    /* background-color: #f4f4f9; */
+    text-align: center;
+    margin-left: 20px;
+    margin-right: 20px;
+    backdrop-filter: blur(50px);
+    border-radius: 40px;
+    background: linear-gradient(50deg, #ffffff02, #ffffff04);
+    box-shadow: 0px 0px 5px rgba(247, 34, 236, 0.687);
+  
+  }
+  
+  .contact h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #ff03c8;
+  }
+  
+  .contact form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    border: 1px solid #ff03c8;
+    border-radius: 30px;
+    padding: 20px;
+  }
+  
+  .contact label {
+    font-size: 1.1rem;
+    text-align: left;
+  }
+  
+  .contact input, .contact textarea {
+    padding: 0.7rem;
+    font-size: 1.1rem;
+    border-radius: 20px;
+    border: 2px solid #ff14d8;
+    background-color:transparent;
+    color: white;
+  }
+  
+  .contact button {
+    padding: 0.8rem;
+    font-size: 1.2rem;
+    background-color: #ed0fe5;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .contact button:hover {
+    background-color: #c315ea;
+  }
+  
+  /* Footer Styles */
+  footer {
+    background-color: #000000;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+    margin-top: 4rem;
+  }
+  .proicon{
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+  }
+/* Fade-in animation */
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Apply fade-in animation */
+  .about, .projects, .skills, .contact {
+    animation: fadeIn 1s ease-in-out;
+  }
+    
+  /* Scroll to top button */
+.scroll-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 100;
+}
+
+.scroll-btn {
+  background-color: #ff00f2;
+  border: none;
+  padding: 10px;
+  border-radius: 50%;
+  color: white;
+  cursor: pointer;
+  font-size: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.scroll-btn:hover {
+  background-color: #f809ece5;
+}
+
+
+
+/* Scrollbar width and color */
+::-webkit-scrollbar {
+  width: 5px; /* Set scrollbar width */
+}
+
+::-webkit-scrollbar-track {
+  background: #000000; /* Scrollbar track color */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #ff00f2; /* Scrollbar thumb color */
+  border-radius: 10px; /* Rounded scrollbar edges */
+  border: 2px solid #000000; /* Adds border to thumb */
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 40px; /* More rounded scrollbar edges at top and bottom */
+}
+
+/* Firefox scrollbar styling */
+* {
+  scrollbar-width: thin; /* Thin scrollbar */
+  scrollbar-color: #ff00f2 #000000; /* Thumb and track colors */
+}
+
+/* For Mozilla Firefox */
+::-moz-scrollbar-thumb {
+  border-radius: 20px; /* Rounded edges in Firefox as well */
+}
+
+
+
+
+
+
+/* hamburger*/
+/* Header Styles */
+
+
+
+/* Mobile-specific styles (for screens up to 600px) */
+@media (max-width: 600px) {
+
+  /* Ensure no element exceeds 100% of the viewport width */
+  * {
+    max-width: 100%; /* Prevent overflow */
+    box-sizing: border-box; /* Include padding and borders in width/height */
+  }
+
+  /* Prevent body and sections from scrolling horizontally */
+  body, html {
+    overflow-x: hidden; /* Disable horizontal scroll */
+  }
+
+  /* Header Mobile Styles */
+  header {
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  
+
+  }
+
+  /* Mobile Menu */
+  .mobile-menu-icon {
+    display: block;
+    cursor: pointer;
+  }
+
+  header nav ul {
+    display: none; /* Hide normal nav for mobile */
+  }
+
+  .nav-links.mobile {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: rgb(0, 0, 0);
+    padding: 1rem;
+    gap: 1rem;
+    text-align: center;
+    border: 1px solid #ff00f2;
+    border-radius: 25px;
+    margin-top: 10px;
+  }
+
+  /* Flex Layout Adjustments */
+  .hero, .about, .projects, .skills, .contact {
+    padding: 2rem 1rem; /* Reduce padding for mobile */
+    text-align: center;
+    
+  }
+
+  .hero h1, .about h2, .projects h2, .skills h2, .contact h2 {
+    font-size: 2rem; /* Adjust font sizes for smaller screens */
+  }
+
+  .hero p, .about p, .projects h3, .skills li {
+    font-size: 1rem;
+  }
+
+  /* Image Responsive Adjustments */
+  .hero-image img {
+    width: 200px; /* Adjust image size for mobile */
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+  
+  /* Scrollbar Visibility */
+  ::-webkit-scrollbar {
+    display: none; /* Hide scrollbars on mobile */
+  }
+
+}
+
+
+
+/* hamburger animation */
+/* Hamburger Menu Styles */
+.hamburger {
+  width: 30px;
+  height: 20px;
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.hamburger span {
+  background-color: #ff00f2;
+  height: 3px;
+  width: 100%;
+  border-radius: 3px;
+  display: block;
+  transition: all 0.3s ease;
+  position: absolute; /* Ensure all spans overlap when needed */
+}
+
+/* Initial Positions */
+.hamburger span:nth-child(1) {
+  top: 0; /* Position at the top */
+}
+
+.hamburger span:nth-child(2) {
+  top: 8px; /* Position in the middle */
+}
+
+.hamburger span:nth-child(3) {
+  top: 16px; /* Position at the bottom */
+}
+
+/* Animation for open state */
+.hamburger.open span:nth-child(1) {
+  transform: rotate(45deg);
+  top: 8px; /* Move to middle position */
+}
+
+.hamburger.open span:nth-child(2) {
+  opacity: 0; /* Hide middle line */
+}
+
+.hamburger.open span:nth-child(3) {
+  transform: rotate(-45deg);
+  top: 8px; /* Move to middle position */
+}
+
+
+
+/* Default hidden state */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(20px); /* Start with a slight translation */
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out; /* Smooth transition */
+}
+
+/* When the element becomes visible */
+.animate-on-scroll.visible {
+  opacity: 1;
+  transform: translateY(0); /* Move to its original position */
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Default menu for larger screens (above 600px) */
+@media (min-width: 601px) {
+  .mobile-menu-icon {
+    display: none; /* Hide hamburger icon on tablets/desktops */
+  }
+
+  header nav ul {
+    display: flex; /* Show normal navigation on tablets/desktops */
+  }
+}

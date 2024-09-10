@@ -6,7 +6,7 @@ function Hero() {
     <section id="hero" className="hero" data-aos="fade-down">
       <div className="hero-content">
       <div className="hero-image" >
-          <img src={p2}  data-aos="fade-in" data-aos-delay="600" />
+          <img src={p2}  alt='error' data-aos="fade-in" data-aos-delay="600" />
         </div>
         <div className="hero-text">
           <h1 data-aos="fade-left" data-aos-delay="500" >Hi, I'm Hariharasudhan</h1>

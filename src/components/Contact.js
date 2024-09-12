@@ -27,7 +27,7 @@ function Contact() {
       'service_0var6md', // Replace with your EmailJS service ID
       'template_k1c3m26', // Replace with your EmailJS template ID
       e.target,
-      'sz9lOLFoxcwf1RWCHIZeS' // Replace with your EmailJS user ID
+      '77bL5zUQYJ-gO0TN7' // Replace with your EmailJS user ID
     )
       .then((result) => {
         console.log('Email sent successfully:', result.text);

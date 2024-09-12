@@ -18,7 +18,7 @@ function About() {
           <p>My journey in the tech world began with a fascination for programming and how it enables us to build and innovate. I was initially captivated by the problem-solving aspects of coding during a high school computer science class. This early exposure led me to pursue a degree in Computer Science, where I delved deeper into various technologies and programming languages.</p>
         </div>
 
-        <div className="grid-item" data-aos="fade-left">
+        <div className="grid-item" data-aos="fade-up">
           <h3>2021 - 2022</h3>
           <p><strong>12th Grade</strong></p>
           <p>Dr. G.S. Kalyanasundaram Memorial School, Kumbakonam</p>
@@ -28,7 +28,7 @@ function About() {
           <p>Kalasalingam Academy of Research and Education</p>
           <p>CGPA: 8.2/10</p><br />
         </div>  
-        <div className="grid-item" data-aos="fade-right">
+        <div className="grid-item" data-aos="fade-down">
           <h3>Certifications</h3>
           <ul>
             <li>Oracle Certified Foundations Associate</li>

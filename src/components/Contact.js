@@ -25,16 +25,18 @@ function Contact() {
 
     emailjs.sendForm(
       'service_0var6md', // Replace with your EmailJS service ID
-      'template_k1c3m26', // Replace with your EmailJS template ID
+      'YOUR_TEMPLATE_ID', // Replace with your EmailJS template ID
       e.target,
       '77bL5zUQYJ-gO0TN7' // Replace with your EmailJS user ID
     )
       .then((result) => {
         console.log('Email sent successfully:', result.text);
+        alert('Thank you! Your message has been sent successfully.'); // Show success alert
         setSubmitted(true); // Indicate success
         setError(false); // Reset error state
       }, (error) => {
         console.log('Email send failed:', error.text);
+        alert('Oops! Something went wrong. Please try again.'); // Show error alert
         setError(true); // Indicate an error
       });
 
@@ -60,7 +62,6 @@ function Contact() {
           data-aos="fade-down"
           data-aos-delay="300"
           required
-          placeholder="Your Name"
         />
         <label htmlFor="email" data-aos="fade-right">Email:</label>
         <input
@@ -72,7 +73,6 @@ function Contact() {
           data-aos="fade-up"
           data-aos-delay="400"
           required
-          placeholder="Your Email"
         />
         <label htmlFor="message" data-aos="fade-right">Message:</label>
         <textarea
@@ -83,13 +83,8 @@ function Contact() {
           data-aos="fade-up"
           data-aos-delay="500"
           required
-          placeholder="Your Message"
         ></textarea>
         <button type="submit">Send</button>
-        
-        {/* Display success or error messages */}
-        {submitted && <p className="success-message">Thank you! Your message has been sent.</p>}
-        {error && <p className="error-message">Oops! Something went wrong, please try again.</p>}
       </form>
     </section>
   );

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import emailjs from 'emailjs-com'; // Import EmailJS for sending emails
+import Swal from 'sweetalert2'; // Import SweetAlert2
 
 function Contact() {
   const [formData, setFormData] = useState({
@@ -31,12 +32,24 @@ function Contact() {
     )
       .then((result) => {
         console.log('Email sent successfully:', result.text);
-        alert('Thank you! Your message has been sent successfully.'); // Show success alert
+        // Show SweetAlert success message
+        Swal.fire({
+          icon: 'success',
+          title: 'Message Sent',
+          text: 'Thank you! Your message has been sent successfully.',
+          confirmButtonText: 'OK',
+        });
         setSubmitted(true); // Indicate success
         setError(false); // Reset error state
       }, (error) => {
         console.log('Email send failed:', error.text);
-        alert('Oops! Something went wrong. Please try again.'); // Show error alert
+        // Show SweetAlert error message
+        Swal.fire({
+          icon: 'error',
+          title: 'Error',
+          text: 'Oops! Something went wrong. Please try again.',
+          confirmButtonText: 'OK',
+        });
         setError(true); // Indicate an error
       });
 
